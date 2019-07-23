@@ -6,139 +6,150 @@
 	<title>Exercises</title>
 	<style type="text/css">
 		textarea {
-		  display:block;
-		  margin:1em 0;
-		}  
-		</style>  
+			display: block;
+			margin: 1em 0;
+		}
+	</style>
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
-<script>
-	
-	$(document).ready(function(){
-	$("#go").click(function()
-	{
-		
-		$("html,body").animate({scrollTop:0})
-		
-	
-	})
-	
-	})
+	<script>
+
+		$(document).ready(function () {
+			$("#go").click(function () {
+
+				$("html,body").animate({ scrollTop: 0 })
 
 
-	$(document).ready(function(){
-	$("#btn1").click(function()
-	{
-		$("#box").width("200px")
-		$("#box").height("200px")
-		
-	
-	});
-	
-	})
+			})
+
+		})
 
 
+		$(document).ready(function () {
+			$("#btn1").click(function () {
+				$("#box").width("200px")
+				$("#box").height("200px")
 
-	$(document).ready(function(){
-	$("#btn2").click(function()
 
-	{	
-		$("#box").width("150px")
-		$("#box").height("150px")
-		
-		
-	});
-	
-	})
-	
+			});
+
+		})
 
 
 
-	$(document).ready(function(){
-	$("#hi").click(function()
-	{	$("#div1").fadeIn(3000)
-		$("#div2").fadeIn("slow")
-	
-		$("#div3").fadeIn(10000)
-	
-		
-	});
-	
-	})
+		$(document).ready(function () {
+			$("#btn2").click(function () {
+				$("#box").width("150px")
+				$("#box").height("150px")
 
 
-	$(document).ready(function(){
-	$("#accept").click(function()
-	{	
-		if($("#accept").prop("checked") == true)
-		{$("#submitbtn").removeAttr('disabled')}
-		else 
-		{$("#submitbtn").attr("disabled", "disabled" )}
-	});
-	
-	})
+			});
 
-
-
-var maxlength=15
-	$(document).ready(function(){
-	$("#textarea").keyup(function()
-	{	
-		
-		var x= maxlength-$("#textarea").val().length
-		
-		$("#rchars").text(x)
-
-
-
-	});
-	
-	})
+		})
 
 
 
 
-	$(document).ready(function(){
-	$(".printPage").click(function()
-	{	
-		window.print();
-	});
-	
-	})
+		$(document).ready(function () {
+			$("#hi").click(function () {
+				$("#div1").fadeIn(3000)
+				$("#div2").fadeIn("slow")
+
+				$("#div3").fadeIn(10000)
+
+
+			});
+
+		})
+
+
+		$(document).ready(function () {
+			$("#accept").click(function () {
+				if ($("#accept").prop("checked") == true) { $("#submitbtn").removeAttr('disabled') }
+				else { $("#submitbtn").attr("disabled", "disabled") }
+			});
+
+		})
+
+
+
+		var maxlength = 15
+		$(document).ready(function () {
+			$("#textarea").keyup(function () {
+
+				var x = maxlength - $("#textarea").val().length
+
+				$("#rchars").text(x)
+
+
+
+			});
+
+		})
+
+
+
+
+		$(document).ready(function () {
+			$(".printPage").click(function () {
+				window.print();
+			});
+
+		})
 
 
 
 
 
-	$(document).ready(function(){
-	$("#ne").click(function()
-	{	
-	          
-		$("#new").append('<div>newdiv</div>')
-	
-			}); 
-	})	
+		$(document).ready(function () {
+			$("#ne").click(function () {
+
+				$("#new").append('<div>newdiv</div>')
+
+			});
+		})
 
 
-	$(document).ready(function(){
-	
-	{	$(".h").css("font-weight","bold")}
-	});
-	
+		$(document).ready(function () {
 
-	$(document).ready(function(){
-	$("#header").click(function()
-	{	
-	          
-		$("#u").append('<li>list</li>')
-	
-			}); 
-	})	
+			{ $(".h").css("font-weight", "bold") }
+		});
 
+
+		$(document).ready(function () {
+			$("#btnclick").click(function () {
+
+				$("#header ul ").append("<li> list")
+
+			});
+		})
 
 
 
-</script>
+
+
+		$(document).ready(function () {
+			$("#button").click(function () {
+
+				$("#button").attr("value", "change value")
+
+			});
+		})
+
+
+
+		$(document).ready(function () {
+			$("#usertext").on("keyup",function () {
+
+                   console.log($("#usertext").val())
+
+			});
+		})
+
+
+
+
+	</script>
 
 </head>
 
@@ -146,7 +157,7 @@ var maxlength=15
 	<h1>Q1</h1>
 	<p id="q1">Change this to jQuery status</p>
 
-	<h1 >Q2</h1>
+	<h1>Q2</h1>
 	<p>Excercise</p>
 	<p>Excercise</p>
 	<p>Excercise</p>
@@ -250,9 +261,9 @@ var maxlength=15
 
 	<h1>Q9</h1>
 	<p>Here should be some text probably with some sense within but its friday so im really really tired</p>
-	<input type="button" id="ne" value="Click to add new div"  />
+	<input type="button" id="ne" value="Click to add new div" />
 
-     <div id="new"> </div>
+	<div id="new"> </div>
 
 	<h1>Q10</h1>
 	<div id="divSelect"></div>
@@ -260,7 +271,7 @@ var maxlength=15
 
 	<h1>Q11</h1>
 	<div id="header">
-		<ul id="u">
+		<ul>
 			<li><a href="#">Life of</a></li>
 
 			<li><a href="#">Brian</a></li>
@@ -278,7 +289,7 @@ var maxlength=15
 	<input type="button" value="Donald Trump" id="button" />
 
 
-	<input type="button" value="GO" id="go" /> 
+	<input type="button" value="GO" id="go" />
 
 	<script src="jQuery.js">
 
