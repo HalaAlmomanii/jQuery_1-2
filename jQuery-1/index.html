@@ -4,13 +4,149 @@
 <head>
 	<meta charset="utf-8">
 	<title>Exercises</title>
+	<style type="text/css">
+		textarea {
+		  display:block;
+		  margin:1em 0;
+		}  
+		</style>  
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+<script>
+	
+	$(document).ready(function(){
+	$("#go").click(function()
+	{
+		
+		$("html,body").animate({scrollTop:0})
+		
+	
+	})
+	
+	})
+
+
+	$(document).ready(function(){
+	$("#btn1").click(function()
+	{
+		$("#box").width("200px")
+		$("#box").height("200px")
+		
+	
+	});
+	
+	})
+
+
+
+	$(document).ready(function(){
+	$("#btn2").click(function()
+
+	{	
+		$("#box").width("150px")
+		$("#box").height("150px")
+		
+		
+	});
+	
+	})
+	
+
+
+
+	$(document).ready(function(){
+	$("#hi").click(function()
+	{	$("#div1").fadeIn(3000)
+		$("#div2").fadeIn("slow")
+	
+		$("#div3").fadeIn(10000)
+	
+		
+	});
+	
+	})
+
+
+	$(document).ready(function(){
+	$("#accept").click(function()
+	{	
+		if($("#accept").prop("checked") == true)
+		{$("#submitbtn").removeAttr('disabled')}
+		else 
+		{$("#submitbtn").attr("disabled", "disabled" )}
+	});
+	
+	})
+
+
+
+var maxlength=15
+	$(document).ready(function(){
+	$("#textarea").keyup(function()
+	{	
+		
+		var x= maxlength-$("#textarea").val().length
+		
+		$("#rchars").text(x)
+
+
+
+	});
+	
+	})
+
+
+
+
+	$(document).ready(function(){
+	$(".printPage").click(function()
+	{	
+		window.print();
+	});
+	
+	})
+
+
+
+
+
+	$(document).ready(function(){
+	$("#ne").click(function()
+	{	
+	          
+		$("#new").append('<div>newdiv</div>')
+	
+			}); 
+	})	
+
+
+	$(document).ready(function(){
+	
+	{	$(".h").css("font-weight","bold")}
+	});
+	
+
+	$(document).ready(function(){
+	$("#header").click(function()
+	{	
+	          
+		$("#u").append('<li>list</li>')
+	
+			}); 
+	})	
+
+
+
+
+</script>
+
 </head>
 
 <body>
 	<h1>Q1</h1>
 	<p id="q1">Change this to jQuery status</p>
 
-	<h1>Q2</h1>
+	<h1 >Q2</h1>
 	<p>Excercise</p>
 	<p>Excercise</p>
 	<p>Excercise</p>
@@ -77,7 +213,7 @@
 
 
 	<p>delay() method sets diffrent speed values.</p>
-	<button>Click to fade in boxes with a delay</button>
+	<button id="hi">Click to fade in boxes with a delay</button>
 	<div id="div1" style="width: 100px;height: 90px;display:none;background-color: #9F81F7;"></div><br>
 	<div id="div2" style="width: 100px;height: 90px;display: none;background-color: #0B610B;"></div><br>
 	<div id="div3" style="width: 100px;height: 90px;display: none;background-color: #61210B;"></div><br>
@@ -101,21 +237,22 @@
      }
  </style>
  -->
-	<label>Maximum 20 charackters</label>
+	<label>Maximum 15 charackters</label>
 	<textarea id="textarea" maxlength="15"></textarea>
 	<span id="rchars">15</span> Character(s) Remaining
 
 
 	<h1>Q8</h1>
-	<p>Hello World</p>
-	<p>Rashed: cascading style sheets</p>
-	<p>Madrasa</p>
+	<p class="h">Hello World</p>
+	<p class="h"> Rashed: cascading style sheets</p>
+	<p class="h">Madrasa</p>
 
 
 	<h1>Q9</h1>
 	<p>Here should be some text probably with some sense within but its friday so im really really tired</p>
-	<input type="button" value="Click to add new div" onclick="new_div()" />
+	<input type="button" id="ne" value="Click to add new div"  />
 
+     <div id="new"> </div>
 
 	<h1>Q10</h1>
 	<div id="divSelect"></div>
@@ -123,12 +260,13 @@
 
 	<h1>Q11</h1>
 	<div id="header">
-		<ul>
+		<ul id="u">
 			<li><a href="#">Life of</a></li>
 
 			<li><a href="#">Brian</a></li>
 		</ul>
 	</div>
+
 	<input id="btnclick" type="button" value="Click to add new li element" />
 
 
@@ -140,8 +278,11 @@
 	<input type="button" value="Donald Trump" id="button" />
 
 
+	<input type="button" value="GO" id="go" /> 
 
-	<script src="jQuery.js"></script>
+	<script src="jQuery.js">
+
+	</script>
 </body>
 
 </html>
